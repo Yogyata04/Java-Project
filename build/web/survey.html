@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-color: #add8e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Todo List Survey</h2>
+        <form action="SurveyServlet" method="POST">
+            <div class="form-group">
+                <label for="satisfaction">1. How satisfied are you with your todo list?</label>
+                <select id="satisfaction" name="satisfaction">
+                    <option value="very-satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="unsatisfied">Unsatisfied</option>
+                    <option value="very-unsatisfied">Very Unsatisfied</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="improvements">2. What improvements would you like to see?</label>
+                <input type="text" id="improvements" name="improvements" placeholder="Enter your suggestions">
+            </div>
+
+            <div class="form-group">
+                <label for="tasks-completed">3. On average, how many tasks do you complete in a day?</label>
+                <input type="number" id="tasks-completed" name="tasks-completed" placeholder="Enter the number of tasks">
+            </div>
+
+            <div class="form-group">
+                <label for="priority-tasks">4. How often do you prioritize your tasks?</label>
+                <select id="priority-tasks" name="priority-tasks">
+                    <option value="always">Always</option>
+                    <option value="often">Often</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="never">Never</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="time-management">5. How would you rate your time management skills?</label>
+                <select id="time-management" name="time-management">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                    <option value="needs-improvement">Needs Improvement</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
